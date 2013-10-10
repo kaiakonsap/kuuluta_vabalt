@@ -2,7 +2,7 @@
 
 // Project constants
 define('PROJECT_NAME', 'Kuuluta Vabalt');
-define('DEFAULT_CONTROLLER', 'welcome');
+define('DEFAULT_CONTROLLER', 'ads');
 define('DEBUG', false);
 
 // Load app
