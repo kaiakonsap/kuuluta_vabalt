@@ -12,6 +12,7 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="<?=ASSETS_URL?>css/bootstrap-3.0.0.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="assets/css/stylesheet.css">
 
 	<!-- Custom styles for this template -->
 	<style>
@@ -41,37 +42,41 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><?=PROJECT_NAME?></a>
+			<a class="navbar-brand" href="#"><img width=100px height=40px src="http://1.bp.blogspot.com/-xLt3Na--ULs/UjZc3tg1v3I/AAAAAAAACCI/2Dqfn_WzY44/s1600/logo.jpg" alt="Logo" class="img-rounded"></a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li class="dropdown-header">Nav header</li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul>
-				</li>
+				<li class="active"><a href="#"><?=PROJECT_NAME?></a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="../navbar/">Default</a></li>
-				<li><a href="../navbar-static-top/">Static top</a></li>
-				<li class="active"><a href="./">Fixed top</a></li>
+			<ul class="nav navbar-nav navbar-left">
+				<li><a href="#about">Tere</a></li>
+				<li><a href="#contact">Talv</a></li>
 			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Otsi...">
+				</div>
+				<button type="submit" class="btn btn-default">Otsi</button>
+			</form>
 		</div><!--/.nav-collapse -->
 	</div>
 </div>
 
-<div class="container">
 
+<div class="container">
+	<div class="row">
+		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner.jpg" class="img-responsive" alt="Responsive image"></div>
+		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image"></div>
+	</div>
+	<div class="list-group">
+		<a href="#" class="list-group-item active">
+			Tags menu
+		</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Dapibus ac facilisis in</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Morbi leo risus</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Porta ac consectetur ac</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Vestibulum at eros</a>
+	</div>
 	<!-- Main component for a primary marketing message or call to action -->
 	<?php
 	require 'views/'.$this->controller.'/'.$this->controller.'_'.$this->action.'.php';
