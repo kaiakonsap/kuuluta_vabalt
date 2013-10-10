@@ -1,7 +1,7 @@
 <?php
 
 // Project constants
-define('PROJECT_NAME', 'halo');
+define('PROJECT_NAME', 'Kuuluta Vabalt');
 define('DEFAULT_CONTROLLER', 'welcome');
 define('DEBUG', false);
 
