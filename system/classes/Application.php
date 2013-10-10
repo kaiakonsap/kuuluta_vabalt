@@ -39,7 +39,7 @@ class Application
 
 		// Authenticate user, if controller requires it
 
-		if (!$controller->auth->logged_in && !$controller->auth->logged_in) {
+		if ($controller->controller=='admin'&&!$controller->auth->logged_in) {
 			$controller->auth->require_auth();
 		}
 
@@ -60,7 +60,7 @@ class Application
 		if (file_exists('config.php')) {
 			require 'config.php';
 		} else {
-			error_out('No config.php. Please make a copy of config.sample.php and name it config.php and configure it.');
+			error_out('No config.php. Please make a copy of config.php and name it config.php and configure it.');
 		}
 	}
 
