@@ -48,10 +48,16 @@
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#"><?=PROJECT_NAME?></a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-left">
 				<li><a href="#about">Tere</a></li>
 				<li><a href="#contact">Talv</a></li>
 			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Otsi...">
+				</div>
+				<button type="submit" class="btn btn-default">Otsi</button>
+			</form>
 		</div><!--/.nav-collapse -->
 	</div>
 </div>
@@ -62,7 +68,15 @@
 		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner.jpg" class="img-responsive" alt="Responsive image"></div>
 		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image"></div>
 	</div>
-
+	<div class="list-group">
+		<a href="#" class="list-group-item active">
+			Tags menu
+		</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Dapibus ac facilisis in</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Morbi leo risus</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Porta ac consectetur ac</a>
+		<a href="#" class="list-group-item"><span class="badge">14</span>Vestibulum at eros</a>
+	</div>
 	<!-- Main component for a primary marketing message or call to action -->
 	<?php
 	require 'views/'.$this->controller.'/'.$this->controller.'_'.$this->action.'.php';
