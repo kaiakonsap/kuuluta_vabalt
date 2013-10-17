@@ -1,6 +1,6 @@
 <style>
 	.clearfix {
-		margin-bottom:5px;
+		margin-bottom:4px;
 }
 	.thumbnails{
 		list-style-type:none;
