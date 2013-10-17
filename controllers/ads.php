@@ -11,5 +11,9 @@ class ads extends Controller {
 	function index(){
 
 	}
+	function insert()
+{
+
+}
 
 }
