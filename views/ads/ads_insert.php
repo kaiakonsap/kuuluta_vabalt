@@ -45,8 +45,6 @@
 				<textarea name="text" id="message" class="input-xlarge  form-control" rows="10" required="required"></textarea>
 				<button type="submit" class="btn btn-primary ">Kuulutus valmis</button>
 			</div>
-			<button type="submit" class="btn btn-primary pull-left">Kuulutus valmis</button>
-
 		</form>
 	</div>
 </div>
