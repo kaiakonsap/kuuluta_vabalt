@@ -1,4 +1,4 @@
-<form method="POST" class="well span8">
+<form method="POST" class="well span8 ad-insert">
 	<div class="row">
 		<div class="span3">
 			<label>Pealkiri</label>
@@ -13,12 +13,17 @@
 				<option value="property">Kinnisvara</option>
 				<option value="home">Kodu</option>
 				<option value="electronics">Elektroonika</option>
+				<option value="computers">Arvutid</option>
+				<option value="phones">Telefonid</option>
+				<option value="construction">Ehitus</option>
+				<option value="sports">Sport</option>
+				<option value="dating">Tutvus</option>
 			</select>
 		</div>
 	<div class="span5">
-		<textarea name="text" id="message" class="input-xlarge span5" rows="10"></textarea>
 		<label>Kuulutus</label>
+		<textarea name="text" id="message" class="input-xlarge span5" rows="10"></textarea>
 	</div>
-		<button type="submit" class="btn btn-primary pull-right">Send</button>
+		<button type="submit" class="btn btn-primary pull-left">Send</button>
 
 </form>

@@ -12,6 +12,7 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="<?=ASSETS_URL?>css/bootstrap-3.0.0.min.css" rel="stylesheet">
+	<link href="<?=ASSETS_URL?>css/custom.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="assets/css/stylesheet.css">
 
 	<!-- Custom styles for this template -->
