@@ -22,6 +22,9 @@
 			padding-top: 70px;
 			background: url(<?= ASSETS_URL ?>img/bg.jpg);
 		}
+		.navbar-brand {
+			padding: 5px 15px;
+		}
 	</style>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
