@@ -51,7 +51,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-left">
 				<li><a href="#about">Kuulutused</a></li>
-				<li><a href="#contact">Lisa Uus</a></li>
+				<li><a href="#contact">Lisa Uus Kuulutus</a></li>
 			</ul>
 			<form class="navbar-form navbar-right" role="search">
 				<div class="form-group">
