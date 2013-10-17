@@ -18,9 +18,9 @@
 			<select id="category" name="category" class="span3" required="required">
 				<option selected=""></option>
 
-				<? foreach($cats as $cat): ?>
+				<? if(isset($cats)):foreach($cats as $cat): ?>
 					<option value="<?=$cat['category_id'] ?>"><?=$cat['category_name'] ?></option>
-				<? endforeach; ?>
+				<? endforeach; endif; ?>
 			</select>
 			<label>Lisa pilt</label>
 			<input name="image" type="file" class="span3">
