@@ -13,6 +13,44 @@
 				<a href="#" class="list-group-item"><span class="badge">14</span>Vestibulum at eros</a>
 			</div>
 		</div>
-		<div class="col-md-9">
+
+		<div class="col-md-3">
+			<img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image">
+			<h1>Hello, world!</h1>
+			<p>...</p>
+			<p><a class="btn btn-primary btn-sm">Learn more</a></p>
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image">
+			<h1>Hello, world!</h1>
+			<p>...</p>
+			<p><a class="btn btn-primary btn-sm">Learn more</a></p>
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image">
+			<h1>Hello, world!</h1>
+			<p>...</p>
+			<p><a class="btn btn-primary btn-sm">Learn more</a></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-3">
+			<img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image">
+			<h1>Hello, world!</h1>
+			<p>...</p>
+			<p><a class="btn btn-primary btn-sm">Learn more</a></p>
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image">
+			<h1>Hello, world!</h1>
+			<p>...</p>
+			<p><a class="btn btn-primary btn-sm">Learn more</a></p>
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image">
+			<h1>Hello, world!</h1>
+			<p>...</p>
+			<p><a class="btn btn-primary btn-sm">Learn more</a></p>
 		</div>
 	</div>
