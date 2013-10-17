@@ -17,5 +17,7 @@ class ads extends Controller {
 	function view(){
 
 }
+	function lists(){
 
+	}
 }

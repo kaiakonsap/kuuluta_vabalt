@@ -1,6 +1,14 @@
+<style>
+	.clearfix {
+		margin-bottom:4px;
+}
+	.thumbnails{
+		list-style-type:none;
+	}
+</style>
 <div class="container">
 <ul class="thumbnails">
-	<li class="col-md-12 clearfix">
+	<li class="col-md-12 clearfix" >
 		<div class="thumbnail clearfix">
 			<img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left col-md-2 clearfix" style='margin-right:10px'>
 			<div class="caption" class="pull-left">
