@@ -47,11 +47,11 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#"><?=PROJECT_NAME?></a></li>
+				<li class="active"><a href="<?=BASE_URL?>"><?=PROJECT_NAME?></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-left">
-				<li><a href="<?=BASE_URL?>ads/list">Kuulutused</a></li>
-				<li><a href="<?=BASE_URL?>ads/insert">Lisa Uus</a></li>
+				<li><a href="<?=BASE_URL?>ads/lists">Kuulutused</a></li>
+				<li><a href="<?=BASE_URL?>ads/insert">Lisa Kuulutus</a></li>
 			</ul>
 			<form class="navbar-form navbar-right" role="search">
 				<div class="form-group">

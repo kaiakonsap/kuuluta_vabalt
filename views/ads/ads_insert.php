@@ -1,3 +1,4 @@
+<div class="container">
 <form method="POST" class="well span8 ad-insert">
 	<div class="row">
 		<div class="span3">
@@ -36,3 +37,4 @@
 		<button type="submit" class="btn btn-primary pull-left">Kuulutus valmis</button>
 
 </form>
+</div>
