@@ -1,4 +1,4 @@
-
+<div class="container">
 	<div class="row">
 		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner.jpg" class="img-responsive" alt="Responsive image"></div>
 		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image"></div>
