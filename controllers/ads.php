@@ -11,10 +11,9 @@ class ads extends Controller {
 	function index(){
 
 	}
-	function insert()
-{
-
-}
+	function insert(){
+		$this->cats = get_all("SELECT * FROM category");
+	}
 	function view(){
 
 }

@@ -16,15 +16,10 @@
 			<label>Kategooria</label>
 			<select id="category" name="category" class="span3" required="required">
 				<option selected=""></option>
-				<option value="vehicles">Sõidukid</option>
-				<option value="property">Kinnisvara</option>
-				<option value="home">Kodu</option>
-				<option value="electronics">Elektroonika</option>
-				<option value="computers">Arvutid</option>
-				<option value="phones">Telefonid</option>
-				<option value="construction">Ehitus</option>
-				<option value="sports">Sport</option>
-				<option value="dating">Tutvus</option>
+
+				<? foreach($cats as $cat): ?>
+					<option value="<?=$cat['category_id'] ?>"><?=$cat['category_name'] ?></option>
+				<? endforeach; ?>
 			</select>
 			<label>Lisa pilt</label>
 			<input name="image" type="file" class="span3">
