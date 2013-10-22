@@ -3,8 +3,8 @@
 		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner.jpg" class="img-responsive" alt="Responsive image"></div>
 		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image"></div>
 	</div>
-	<div style="text-align:center;" class="alert alert-info"><strong>Kuuluta vabalt!</strong></div>
-	<div class="container">
+	<a href="<?=BASE_URL?>ads/insert"><div style="text-align:center;" class="alert alert-info"><strong>Kuuluta vabalt!</strong></div></a>
+
 		<div class="row">
 			<div class="col-md-3">
 				<div class="list-group">
@@ -63,5 +63,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+
 </div>
