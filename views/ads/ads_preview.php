@@ -27,6 +27,8 @@
 					<button type="button" class="btn btn-primary icon pull-center">110.00 €</button>
 					<p>Telefoni number: xxx xxx 12</p>
 					<p>Email: olenlahe@khk.ee</p>
+					<p>Peeter Piider</p>
+					<p>Asukoht: Tartu Kutsehariduskeskus</p>
 				</div>
 			</div>
 		</div>
@@ -37,6 +39,12 @@
 		</div>
 		<div class="col-md-4">
 			<p>Kuulutuse lisamise kuupäev</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="btn-bar well col-lg-12">
+			<button type="button" class="btn btn-default btn-lg">Tagasi kuulutust muutma</button>
+			<button type="button" class="btn btn-default btn-lg">Lisa kuulutus</button>
 		</div>
 	</div>
 </div>

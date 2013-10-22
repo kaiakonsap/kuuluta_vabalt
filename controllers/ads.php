@@ -37,4 +37,7 @@ class ads extends Controller {
 	function lists(){
 
 	}
+	function preview() {
+
+	}
 }
