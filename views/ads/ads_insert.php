@@ -12,15 +12,15 @@
 				</div>
 				<div class="form-group">
 					<label>Telefon</label>
-					<input name="phone" type="text" class="span3 form-control" placeholder="Telefon" required="required">
+					<input name="phone" type="text" class="span3 form-control" placeholder="Telefon" pattern="[0-9]+" required="required">
 				</div>
 				<div class="form-group">
 					<label>Pealkiri</label>
 					<input name="title" type="text" class="span3 form-control" placeholder="Pealkiri" required="required">
 				</div>
 				<div class="form-group">
-					<label>Hind</label>
-					<input name="price" type="text" class="span3 form-control" placeholder="Hind" required="required">
+					<label>Hind (€)</label>
+					<input name="price" type="text" class="span3 form-control" placeholder="Hind" pattern="\d+(,\d{2})?" required="required">
 				</div>
 				<div class="form-group">
 					<label>Asukoht</label>
