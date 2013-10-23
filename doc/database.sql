@@ -1,30 +1,37 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Okt 17, 2013 kell 12:43 PM
--- Serveri versioon: 5.5.32
--- PHP versioon: 5.4.19
+-- Generation Time: Oct 23, 2013 at 07:53 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET FOREIGN_KEY_CHECKS=0;
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
 --
--- Andmebaas: `kuuluta`
+-- Database: `kuuluta_vabalt`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabeli struktuur tabelile `ad`
+-- Table structure for table `ad`
 --
 
-DROP TABLE IF EXISTS `ad`;
 CREATE TABLE IF NOT EXISTS `ad` (
   `ad_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ad_publisher_name` varchar(50) NOT NULL,
   `ad_title` varchar(50) NOT NULL,
+  `ad_price` int(10) NOT NULL,
+  `ad_location` text NOT NULL,
   `ad_text` text NOT NULL,
   `ad_mail` varchar(50) NOT NULL,
   `ad_phone` int(10) unsigned NOT NULL,
@@ -33,15 +40,21 @@ CREATE TABLE IF NOT EXISTS `ad` (
   `deleted` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ad_id`),
   KEY `ad_category` (`ad_category`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `ad`
+--
+
+INSERT INTO `ad` (`ad_id`, `ad_publisher_name`, `ad_title`, `ad_price`, `ad_location`, `ad_text`, `ad_mail`, `ad_phone`, `ad_category`, `ad_time`, `deleted`) VALUES
+(1, 'Aaa', 'Hello!', 12, 'Tartu', 'Müüa hobune.', 'ada@pada', 444, 1, '2013-10-23 17:49:47', 0);
 
 -- --------------------------------------------------------
 
 --
--- Tabeli struktuur tabelile `category`
+-- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `category`;
 CREATE TABLE IF NOT EXISTS `category` (
   `category_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `category_name` varchar(50) NOT NULL,
@@ -49,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
--- Andmete tõmmistamine tabelile `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
@@ -66,10 +79,9 @@ INSERT INTO `category` (`category_id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabeli struktuur tabelile `event`
+-- Table structure for table `event`
 --
 
-DROP TABLE IF EXISTS `event`;
 CREATE TABLE IF NOT EXISTS `event` (
   `event_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -77,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `event` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Andmete tõmmistamine tabelile `event`
+-- Dumping data for table `event`
 --
 
 INSERT INTO `event` (`event_id`, `name`) VALUES
@@ -88,10 +100,9 @@ INSERT INTO `event` (`event_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabeli struktuur tabelile `log`
+-- Table structure for table `log`
 --
 
-DROP TABLE IF EXISTS `log`;
 CREATE TABLE IF NOT EXISTS `log` (
   `ad_id` int(10) unsigned NOT NULL,
   `event_id` int(10) unsigned NOT NULL,
@@ -102,10 +113,9 @@ CREATE TABLE IF NOT EXISTS `log` (
 -- --------------------------------------------------------
 
 --
--- Tabeli struktuur tabelile `user`
+-- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(25) NOT NULL,
@@ -115,26 +125,29 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Andmete tõmmistamine tabelile `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `deleted`) VALUES
 (1, 'demo', 'demo', 0);
 
 --
--- Tõmmistatud tabelite piirangud
+-- Constraints for dumped tables
 --
 
 --
--- Piirangud tabelile `ad`
+-- Constraints for table `ad`
 --
 ALTER TABLE `ad`
   ADD CONSTRAINT `ad_ibfk_1` FOREIGN KEY (`ad_category`) REFERENCES `category` (`category_id`);
 
 --
--- Piirangud tabelile `log`
+-- Constraints for table `log`
 --
 ALTER TABLE `log`
-  ADD CONSTRAINT `log_ibfk_2` FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`),
-  ADD CONSTRAINT `log_ibfk_1` FOREIGN KEY (`ad_id`) REFERENCES `ad` (`ad_id`);
-SET FOREIGN_KEY_CHECKS=1;
+  ADD CONSTRAINT `log_ibfk_1` FOREIGN KEY (`ad_id`) REFERENCES `ad` (`ad_id`),
+  ADD CONSTRAINT `log_ibfk_2` FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
