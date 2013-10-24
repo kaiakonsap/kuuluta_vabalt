@@ -15,15 +15,15 @@ class ads extends Controller {
 		$this->cats = get_all("SELECT * FROM category");
 
 		if(isset($_POST) && !empty($_POST)):
-			$data["ad_title"]=$_POST["title"];
-			$data["ad_text"]=$_POST["text"];
-			$data["ad_phone"]=$_POST["phone"];
-			$data["ad_category"]=$_POST["category"];
-			$data["ad_publisher_name"]=$_POST["fullname"];
-			$data["ad_price"]=$_POST["price"];
-			$data["ad_location"]=$_POST["location"];
+			$data["ad_title"]=trim($_POST["title"]);
+			$data["ad_text"]=trim($_POST["text"]);
+			$data["ad_phone"]=trim($_POST["phone"]);
+			$data["ad_category"]=trim($_POST["category"]);
+			$data["ad_publisher_name"]=trim($_POST["fullname"]);
+			$data["ad_price"]=trim($_POST["price"]);
+			$data["ad_location"]=trim($_POST["location"]);
 			if(isset($_POST["mail"])):
-				$data["ad_mail"]=$_POST["mail"];
+				$data["ad_mail"]=trim($_POST["mail"]);
 			endif;
 			if(isset($_POST["image"])):
 				$data["ad_image"]=ASSETS_URL."images/".$_POST["image"];
