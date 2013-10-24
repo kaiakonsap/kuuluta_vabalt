@@ -35,7 +35,8 @@ class ads extends Controller {
 
 }
 	function lists(){
-
+		$ad_id = $this->params[0];
+		$this->ads = get_all("SELECT * FROM ad");
 	}
 	function preview() {
 
