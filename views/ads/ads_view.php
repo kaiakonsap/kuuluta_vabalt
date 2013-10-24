@@ -27,6 +27,8 @@
 					<button type="button" class="btn btn-primary icon pull-center">110.00 €</button>
 					<p>Telefoni number: xxx xxx 12</p>
 					<p>Email: olenlahe@khk.ee</p>
+					<p>Nimi: Kana Jalg</p>
+					<p>Asukoht: Sigala</p>
 				</div>
 			</div>
 		</div>
