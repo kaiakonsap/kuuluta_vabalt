@@ -8,11 +8,11 @@
 				</div>
 				<div class="form-group">
 					<label>E-mail</label>
-					<input name="mail" type="text" class="span3 form-control" placeholder="Meil">
+					<input name="mail" type="email" class="span3 form-control" placeholder="Meil">
 				</div>
 				<div class="form-group">
 					<label>Telefon</label>
-					<input name="phone" type="text" class="span3 form-control" placeholder="Telefon" required="required">
+					<input name="phone" type="number" class="span3 form-control" placeholder="Telefon" required="required">
 				</div>
 				<div class="form-group">
 					<label>Pealkiri</label>
@@ -20,7 +20,7 @@
 				</div>
 				<div class="form-group">
 					<label>Hind</label>
-					<input name="price" type="text" class="span3 form-control" placeholder="Hind" required="required">
+					<input name="price" type="number" class="span3 form-control" placeholder="Hind" required="required">
 				</div>
 				<div class="form-group">
 					<label>Asukoht</label>
