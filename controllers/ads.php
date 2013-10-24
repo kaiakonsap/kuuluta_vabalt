@@ -9,6 +9,8 @@
 
 class ads extends Controller {
 	function index(){
+		$this->categories = get_all("SELECT * FROM category");
+
 
 	}
 	function insert(){
