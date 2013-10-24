@@ -28,7 +28,7 @@
 					<p>Telefoni number: xxx xxx 12</p>
 					<p>Email: olenlahe@khk.ee</p>
 					<p>Nimi: Kana Jalg</p>
-					<p>Asukoht: Sigala</p>
+					<p>Asukoht: Linnugripp</p>
 				</div>
 			</div>
 		</div>
