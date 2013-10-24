@@ -9,6 +9,8 @@
 
 class ads extends Controller {
 	function index(){
+		$this->categories = get_all("SELECT * FROM category");
+
 
 	}
 	function insert(){
@@ -17,7 +19,8 @@ class ads extends Controller {
 
 	}
 	function view(){
-
+		$ad_id = $this->params[0];
+		$this->ads = get_one("SELECT * FROM ad WHERE ad_id='$ad_id'");
 }
 	function lists(){
 		$this->ads = get_all("SELECT * FROM ad");
