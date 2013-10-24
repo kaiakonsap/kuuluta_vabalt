@@ -15,7 +15,7 @@
 			<div class="caption" class="pull-left">
 				<span class="btn btn-primary icon  pull-right">110.00€</span>
 				<h4>
-					<a href="<?=BASE_URL?>ads/view<?=$ad['ad_id']?>" ><?=$ad['ad_title']?></a>
+					<a href="<?=BASE_URL?>ads/view/<?=$ad['ad_id']?>" ><?=$ad['ad_title']?></a>
 				</h4>
 				<small>150 tähemärki stuffi</small>
 			</div>
