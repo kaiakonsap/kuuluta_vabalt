@@ -43,8 +43,8 @@
 	</div>
 	<div class="row">
 		<div class="btn-bar well col-lg-12">
-			<button type="button" class="btn btn-default btn-lg">Tagasi kuulutust muutma</button>
-			<button type="button" class="btn btn-default btn-lg">Lisa kuulutus</button>
+			<button type="button" class="btn btn-primary btn-lg">Tagasi kuulutust muutma</button>
+			<button type="button" class="btn btn-primary btn-lg">Lisa kuulutus</button>
 		</div>
 	</div>
 </div>
