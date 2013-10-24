@@ -14,12 +14,11 @@
 			<div class="caption" class="pull-left">
 				<span class="btn btn-primary icon  pull-right">110.00€</span>
 				<h4>
-					<a href="#" >Kuulutuse pealkiri</a>
+					<a href="<?=BASE_URL?>ads/view" >Kuulutuse pealkiri</a>
 				</h4>
 				<small>150 tähemärki stuffi</small>
-
-
 			</div>
+			<a href="#"><span class="label label-info">Kategooria</span></a>
 		</div>
 	</li>
 	<li class="col-md-12 clearfix">
@@ -28,12 +27,11 @@
 			<div class="caption" class="pull-left">
 				<span class="btn btn-primary icon  pull-right">110.00€</span>
 				<h4>
-					<a href="#" >Kuulutuse pealkiri</a>
+					<a href="<?=BASE_URL?>ads/view" >Kuulutuse pealkiri</a>
 				</h4>
 				<small>150 tähemärki stuffi</small>
-
-
 			</div>
+			<a href="#"><span class="label label-info">Kategooria</span></a>
 		</div>
 	</li>
 </ul>
