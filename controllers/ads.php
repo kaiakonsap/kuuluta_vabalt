@@ -40,4 +40,7 @@ class ads extends Controller {
 			header('Location: '.BASE_URL);
 		endif;
 	}
+	function help() {
+
+	}
 }

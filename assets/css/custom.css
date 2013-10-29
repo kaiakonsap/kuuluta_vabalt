@@ -12,3 +12,8 @@
 .btn-bar {
 	margin-top: 30px;
 }
+
+.btn-bar a {
+	text-decoration: none;
+	color: white;
+}

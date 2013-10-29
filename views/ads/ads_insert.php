@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row well">
-		<form action="preview" method="POST" class="span8 ad-insert form">
+		<form action="preview" method="POST" class="form-group ad-insert">
 			<div class="col-lg-4">
 				<div class="form-group">
 					<label>Kuulutaja nimi</label>
@@ -42,10 +42,10 @@
 					<input name="data[ad_image]" type="file" class="span3">
 				</div>
 			</div>
-			<div class="col-lg-8 pull-right">
+			<div class="col-lg-8 form-group">
 				<label>Kuulutus</label>
-				<textarea name="data[ad_text]" id="message" class="input-xlarge  form-control" rows="10" required="required"></textarea>
-				<button type="submit" name="preview" class="btn btn-primary ">Kuulutus valmis</button>
+				<textarea name="data[ad_text]" id="message" class="input-large form-control" rows="10" required="required"></textarea>
+				<button type="submit" name="preview" class="btn btn-primary btn-lg">Kuulutus valmis</button>
 			</div>
 		</form>
 	</div>
