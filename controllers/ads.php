@@ -41,4 +41,7 @@ class ads extends Controller {
 
 		endif;
 	}
+	function help() {
+
+	}
 }
