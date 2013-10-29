@@ -45,7 +45,7 @@
 			<div class="col-lg-8 form-group">
 				<label>Kuulutus</label>
 				<textarea name="data[ad_text]" id="message" class="input-large form-control" rows="10" required="required"></textarea>
-				<button type="submit" name="preview" class="btn btn-primary ">Kuulutus valmis</button>
+				<button type="submit" name="preview" class="btn btn-primary btn-lg">Kuulutus valmis</button>
 			</div>
 		</form>
 	</div>
