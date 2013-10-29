@@ -28,17 +28,16 @@ class ads extends Controller {
 	function preview() {
 		if(isset($_POST["preview"]) && !empty($_POST)):
 			foreach ($_POST["data"] as $element_name=>$element_value) {
-				$data[$element_name]=trim($element_value);
-
+				$_SESSION["preview_data"][$element_name]=trim($element_value);
 			}
-		$this->data=$data;
-			$id=$data["ad_category"];
+			$id=$_SESSION["preview_data"]["ad_category"];
 			$this->category=get_one("SELECT category_name FROM category WHERE category_id='$id'");
-			$_SESSION["preview_data"]=$data;
+
+
 		endif;
 		if(isset($_POST["submit"])):
 			insert("ad", $_SESSION["preview_data"]);
-
+			header('Location: '.BASE_URL);
 		endif;
 	}
 }

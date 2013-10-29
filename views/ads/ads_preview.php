@@ -20,15 +20,16 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<h1><?=$data["ad_title"]?></h1>
-					<p><?=$data["ad_text"]?></p>
+
+					<h1><?=$_SESSION["preview_data"]["ad_title"]?></h1>
+					<p><?=$_SESSION["preview_data"]["ad_text"]?></p>
 				</div>
 				<div class="col-md-6">
-					<button type="button" class="btn btn-primary icon pull-center"><?=$data["ad_price"]?> €</button>
-					<p>Telefoni number: <?=$data["ad_phone"]?></p>
-					<p>Email: <?=$data["ad_mail"]?></p>
-					<p><?=$data["ad_publisher_name"]?></p>
-					<p>Asukoht: <?=$data["ad_location"]?></p>
+					<button type="button" class="btn btn-primary icon pull-center"><?=$_SESSION["preview_data"]["ad_price"]?> €</button>
+					<p>Telefoni number: <?=$_SESSION["preview_data"]["ad_phone"]?></p>
+					<p>Email: <?=$_SESSION["preview_data"]["ad_mail"]?></p>
+					<p><?=$_SESSION["preview_data"]["ad_publisher_name"]?></p>
+					<p>Asukoht: <?=$_SESSION["preview_data"]["ad_location"]?></p>
 				</div>
 			</div>
 		</div>
