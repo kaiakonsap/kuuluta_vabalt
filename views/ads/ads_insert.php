@@ -44,7 +44,7 @@
 			</div>
 			<div class="col-lg-8 pull-right">
 				<label>Kuulutus</label>
-				<textarea name="data[ad_text]" id="message" class="input-xlarge  form-control" rows="10" required="required"></textarea>
+				<textarea name="data[ad_text]" id="message" class="form-control" rows="10" required="required"></textarea>
 				<button type="submit" name="preview" class="btn btn-primary ">Kuulutus valmis</button>
 			</div>
 		</form>
