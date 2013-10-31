@@ -93,4 +93,7 @@ class ads extends Controller {
 	function help() {
 
 	}
+	function pricelist() {
+		$this->pricelist = get_all("SELECT * FROM pricelist");
+	}
 }

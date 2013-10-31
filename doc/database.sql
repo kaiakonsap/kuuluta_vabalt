@@ -3,18 +3,18 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Okt 29, 2013 kell 10:22 AM
--- Serveri versioon: 5.5.32
--- PHP versioon: 5.4.19
+-- Loomise aeg: Okt 31, 2013 kell 11:50 EL
+-- Serveri versioon: 5.6.11
+-- PHP versioon: 5.5.3
 
-SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
 -- Andmebaas: `kuuluta`
 --
-
+CREATE DATABASE IF NOT EXISTS `kuuluta` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `kuuluta`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `ad` (
   `deleted` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ad_id`),
   KEY `ad_category` (`ad_category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
 -- Andmete tõmmistamine tabelile `ad`
@@ -46,7 +46,8 @@ CREATE TABLE IF NOT EXISTS `ad` (
 
 INSERT INTO `ad` (`ad_id`, `ad_title`, `ad_text`, `ad_mail`, `ad_phone`, `ad_category`, `ad_publisher_name`, `ad_price`, `ad_location`, `ad_image`, `ad_time`, `deleted`) VALUES
 (3, 'lololo', 'majake', 'mail@mail', 346, 1, 'nimi', 588, 'tartu', 'MAJA.blend', '2013-10-17 13:22:38', 0),
-(21, 'title', 'gjhfjftfy', '', 4444, 5, 'Kia', 444, 'koht', NULL, '2013-10-29 09:11:15', 0);
+(21, 'title', 'gjhfjftfy', '', 4444, 5, 'Kia', 444, 'koht', NULL, '2013-10-29 09:11:15', 0),
+(22, 'asdfasdf', 'asdff', 'asdf', 0, 3, 'asdf', 0, 'asdfa', NULL, '2013-10-31 09:59:55', 0);
 
 -- --------------------------------------------------------
 
@@ -115,6 +116,30 @@ CREATE TABLE IF NOT EXISTS `log` (
 -- --------------------------------------------------------
 
 --
+-- Tabeli struktuur tabelile `pricelist`
+--
+
+DROP TABLE IF EXISTS `pricelist`;
+CREATE TABLE IF NOT EXISTS `pricelist` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `description` varchar(250) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  `price` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Andmete tõmmistamine tabelile `pricelist`
+--
+
+INSERT INTO `pricelist` (`id`, `description`, `price`) VALUES
+(1, 'Ilma pildita kuulutus', 600),
+(2, 'Pildiga kuulutus', 800),
+(3, 'Pildiga kuulutus esilehel', 1200),
+(4, 'Kuulutuse esiletõstmine', 50);
+
+-- --------------------------------------------------------
+
+--
 -- Tabeli struktuur tabelile `user`
 --
 
@@ -150,4 +175,3 @@ ALTER TABLE `ad`
 ALTER TABLE `log`
   ADD CONSTRAINT `log_ibfk_1` FOREIGN KEY (`ad_id`) REFERENCES `ad` (`ad_id`),
   ADD CONSTRAINT `log_ibfk_2` FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`);
-SET FOREIGN_KEY_CHECKS=1;
