@@ -7,18 +7,12 @@
 				</tr>
 			</thead>
 			<tbody>
+				<?foreach($pricelist as $pricelist_row):?>
 				<tr>
-					<td><span class="service">Ilma pildita kuulutus</span></td>
-					<td><span class="btn btn-primary">600£</span></td>
+					<td><span class="service"><?=$pricelist_row['description']?></span></td>
+					<td><span class="btn btn-primary"><?=$pricelist_row['price']?>€</span></td>
 				</tr>
-				<tr>
-					<td><span class="service">Pildiga kuulutus</span></td>
-					<td><span class="btn btn-primary">900£</span></td>
-				</tr>
-				<tr>
-					<td><span class="service">Pildiga kuulutus esilehel</span></td>
-					<td><span class="btn btn-primary">1400£</span></td>
-				</tr>
+				<?endforeach?>
 			</tbody>
 		</table>
 </div>
