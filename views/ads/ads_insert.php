@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row well">
-		<form action="preview" method="POST" class="form-group ad-insert">
+		<form action="preview" method="POST" class="form-group ad-insert" enctype="multipart/form-data">
 			<div class="col-lg-4">
 				<div class="form-group">
 					<label>Kuulutaja nimi</label>
@@ -39,7 +39,7 @@
 				</div>
 				<div class="form-group">
 					<label>Lisa pilt</label>
-					<input name="data[ad_image]" type="file" class="span3">
+					<input name="ad_image" type="file" class="span3">
 				</div>
 			</div>
 			<div class="col-lg-8 form-group">
