@@ -46,7 +46,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><img width=100px height=40px src="http://1.bp.blogspot.com/-xLt3Na--ULs/UjZc3tg1v3I/AAAAAAAACCI/2Dqfn_WzY44/s1600/logo.jpg" alt="Logo" class="img-rounded"></a>
+			<a class="navbar-brand" href="#"><img width=100px height=40px src="<?=BASE_URL?>assets/img/logo.png" alt="Logo" class="img-rounded"></a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
