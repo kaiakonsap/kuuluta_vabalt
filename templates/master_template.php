@@ -56,6 +56,7 @@
 				<li><a href="<?=BASE_URL?>ads/lists">Kuulutused</a></li>
 				<li><a href="<?=BASE_URL?>ads/insert">Lisa Kuulutus</a></li>
 				<li><a href="<?=BASE_URL?>ads/help">Abi</a></li>
+				<li><a href="<?=BASE_URL?>ads/pricelist">Hinnakiri</a></li>
 			</ul>
 			<form class="navbar-form navbar-right" role="search">
 				<div class="form-group">
