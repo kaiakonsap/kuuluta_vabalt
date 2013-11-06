@@ -11,9 +11,23 @@ class ads extends Controller {
 	function view(){
 		$ad_id = $this->params[0];
 		$this->ads = get_one("SELECT * FROM ad WHERE ad_id='$ad_id'");
+		$this->categories = get_all("SELECT * FROM category");
+		$cat =  array();
+		foreach($this->categories as $ct){
+			$cat[$ct["category_id"]]=$ct["category_name"];
+		}
+		$this->categories = $cat;
+
 	}
 	function lists(){
-		$this->ads = get_all("SELECT * FROM ad");
+		$this->ads = get_all("SELECT * FROM ad" );
+		$this->categories = get_all("SELECT * FROM category");
+		$cat =  array();
+		foreach($this->categories as $ct){
+			$cat[$ct["category_id"]]=$ct["category_name"];
+		}
+		$this->categories = $cat;
+
 	}
 	function preview() {
 		/**

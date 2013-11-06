@@ -13,13 +13,13 @@
 				<div class="thumbnail clearfix">
 					<img src="http://www.vendelin.ee/photoblog/images/20100713233330_karu3.jpg" alt="ALT NAME" class="pull-left col-md-2 clearfix" style='margin-right:10px'>
 					<div class="caption" class="pull-left">
-						<span class="btn btn-primary icon  pull-right">110.00€</span>
+						<span class="btn btn-primary icon  pull-right"><?=$ad['ad_price']?></span>
 						<h4>
 							<a href="<?=BASE_URL?>ads/view/<?=$ad['ad_id']?>" ><?=$ad['ad_title']?></a>
 						</h4>
 						<small>150 tähemärki stuffi</small>
 					</div>
-					<a href="#"><span class="label label-info">Kategooria</span></a>
+					<a href="<?=BASE_URL?>categories/index/<?=$category['category_name']?>"><span class="label label-info"><?=$category['category_name']?></span></a>
 				</div>
 			</li>
 		</ul>

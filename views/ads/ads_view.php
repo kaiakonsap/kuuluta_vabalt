@@ -35,7 +35,7 @@
 	</div>
 	<div class="row" style="margin-top:15px;">
 		<div class="col-md-8">
-			<button type="button" class="btn btn-info btn-xs "><?=$ads['ad_category']?></button>
+			<button type="button" class="btn btn-info btn-xs "><?=$categories[$ads['ad_category']]?></button>
 		</div>
 		<div class="col-md-4">
 			<p><?=$ads['ad_time']?></p>
