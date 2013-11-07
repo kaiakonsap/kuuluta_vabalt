@@ -1,7 +1,8 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner.jpg" class="img-responsive" alt="Responsive image"></div>
-		<div class="col-md-6"><img src="http://www.mormonshare.com/sites/default/files/handouts/cg_banner-blank.gif" class="img-responsive" alt="Responsive image"></div>
+		<div class="slogan">
+			<h1 class="text-center text-info">Sinu vana on kellegi uus!</h1>
+		</div>
 	</div>
 	<a href="<?=BASE_URL?>ads/insert"><div style="text-align:center;" class="alert alert-info"><strong>Kuuluta vabalt!</strong></div></a>
 
