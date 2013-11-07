@@ -1,7 +1,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
-			<img width="320px" alt="140x140" src="http://lorempixel.com/140/140/" />
+			<?if(isset($_SESSION["preview_data"]["ad_image"])):?>
+			<img width="320px" alt="140x140" src="<?=$_SESSION["preview_data"]["ad_image"]?>" />
+			<?endif?>
 		</div>
 		<div class="col-md-8">
 			<div class="row-fluid">
