@@ -6,10 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<title><?=PROJECT_NAME?></title>
 	<link rel="shortcut icon" href="<?=ASSETS_URL?>ico/favicon.png">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-
-	<title><?=PROJECT_NAME?></title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="<?=ASSETS_URL?>css/bootstrap-3.0.0.min.css" rel="stylesheet">
@@ -51,13 +50,13 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="<?=BASE_URL?>"><?=PROJECT_NAME?></a></li>
+				<li><a href="<?=BASE_URL?>"><?=PROJECT_NAME?></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-left">
-				<li><a href="<?=BASE_URL?>ads/lists">Kuulutused</a></li>
-				<li><a href="<?=BASE_URL?>ads/insert">Lisa Kuulutus</a></li>
-				<li><a href="<?=BASE_URL?>ads/help">Abi</a></li>
-				<li><a href="<?=BASE_URL?>ads/pricelist">Hinnakiri</a></li>
+				<li <?= $action == 'lists' ? 'class="active"' : ''?>><a href="<?=BASE_URL?>ads/lists">Kuulutused</a></li>
+				<li <?= $action == 'insert' ? 'class="active"' : ''?>><a href="<?=BASE_URL?>ads/insert">Lisa Kuulutus</a></li>
+				<li <?= $action == 'help' ? 'class="active"' : ''?>><a href="<?=BASE_URL?>ads/help">Abi</a></li>
+				<li <?= $action == 'pricelist' ? 'class="active"' : ''?>><a href="<?=BASE_URL?>ads/pricelist">Hinnakiri</a></li>
 				<? if (isset($_SESSION['user_id'])) { ?>
 					<li><a href="<?=BASE_URL?>log_actions/logout">Logi välja</a></li>
 				<? }else{ ?>
