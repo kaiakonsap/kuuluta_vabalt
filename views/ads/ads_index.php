@@ -10,7 +10,7 @@
 					<div class="list-group">
 						<a href="#" class="list-group-item active">Categories</a>
 					<?foreach ($categories as $category):?>
-						<a href="<?=BASE_URL?>categories/index/<?=$category?>" class="list-group-item"><?=$category['category_name']?></a>
+						<a href="<?=BASE_URL?>categories/index/<?=$category['category_name']?>" class="list-group-item"><?=$category['category_name']?></a>
 					<? endforeach?>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-
+<!--uus controller login ja ühendada see authiga-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,6 +57,12 @@
 				<li><a href="<?=BASE_URL?>ads/insert">Lisa Kuulutus</a></li>
 				<li><a href="<?=BASE_URL?>ads/help">Abi</a></li>
 				<li><a href="<?=BASE_URL?>ads/pricelist">Hinnakiri</a></li>
+				<? if (isset($_SESSION['user_id'])) { ?>
+					<li><a href="<?=BASE_URL?>log_actions/logout">Logi välja</a></li>
+				<? }else{ ?>
+					<li><a href="<?=BASE_URL?>log_actions">Logi sisse</a></li>
+				<? }?>
+
 			</ul>
 			<form class="navbar-form navbar-right" role="search">
 				<div class="form-group">

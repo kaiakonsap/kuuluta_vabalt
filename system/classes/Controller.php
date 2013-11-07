@@ -2,7 +2,9 @@
 
 class Controller
 {
+
 	public $template = 'master';
+	public $requires_login = false;
 
 	function render($template)
 	{
