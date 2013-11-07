@@ -19,7 +19,7 @@
 				</h4>
 				<small><?=$ad['ad_text']?></small>
 			</div>
-			<a href="#"><span class="label label-info"><?=$categories[$ad['ad_category']]?></span></a>
+			<a href="<?=BASE_URL?>categories/index/<?=$categories[$ad['ad_category']]?>" ><span class="label label-info"><?=$categories[$ad['ad_category']]?></span></a>
 		</div>
 	</li>
 </ul>
