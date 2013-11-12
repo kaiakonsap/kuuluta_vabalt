@@ -84,7 +84,8 @@ class ads extends Controller {
 
 		if(isset($_POST["submit"])){
 			insert("ad", $_SESSION["preview_data"]);
-			header('Location: '.BASE_URL);
+			$_SESSION['adInsertSuccess'] = "<p><strong>Kuulutuse sisestamine õnnestus!</strong> Täname Teid koostöö eest!</p>";
+			header('Location: '.BASE_URL.'/ads/lists/');
 		}
 	}
 	function help() {
