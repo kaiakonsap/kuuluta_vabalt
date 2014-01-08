@@ -89,8 +89,17 @@ class ads extends Controller {
 		}
 	}
 	function help() {
+        $this->help = get_all("SELECT * FROM help");
 
-	}
+        //TODO: Empty $_POST["new_question"] upon page refresh
+        //TODO?: Give info on question limit
+        if(!empty($_POST["new_question"]) && preg_match("/[a-zA-Z0-9]/",$_POST["new_question"])){
+            $q = $_POST['new_question'];
+            $question = ["help_new_q" => $q];
+            insert("help_new", $question);
+            $_SESSION['adInsertSuccess'] = "<strong>Küsimus saadeti ära!</strong>";
+        }
+    }
 	function pricelist() {
 		$this->pricelist = get_all("SELECT * FROM pricelist");
 	}

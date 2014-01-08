@@ -102,6 +102,54 @@ INSERT INTO `event` (`event_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tabeli struktuur tabelile `help`
+--
+
+CREATE TABLE IF NOT EXISTS `help` (
+  `help_id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `help_q` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `help_a` varchar(255) CHARACTER SET latin1 NOT NULL,
+  PRIMARY KEY (`help_id`),
+  KEY `help_q` (`help_q`),
+  KEY `help_q_2` (`help_q`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Andmete tõmmistamine tabelile `help`
+--
+
+INSERT INTO `help` (`help_id`, `help_q`, `help_a`) VALUES
+(1, 'Esimene küsimus?', 'Esimese küsimuse vastus!'),
+(2, 'Teine küsimus?', 'Teise küsimuse vastus!'),
+(3, 'Kolmas küsimus?', 'Kolmanda küsimuse vastus!'),
+(4, 'Neljas küsimus?', 'Neljanda küsimuse vastus!'),
+(5, 'Viies küsimus?', 'Viienda küsimuse vastus!');
+
+-- --------------------------------------------------------
+
+--
+-- Tabeli struktuur tabelile `help_new`
+--
+
+CREATE TABLE IF NOT EXISTS `help_new` (
+  `help_new_id` int(11) NOT NULL AUTO_INCREMENT,
+  `help_new_q` varchar(300) NOT NULL,
+  PRIMARY KEY (`help_new_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='ajutine tabel?' AUTO_INCREMENT=5 ;
+
+--
+-- Andmete tõmmistamine tabelile `help_new`
+--
+
+INSERT INTO `help_new` (`help_new_id`, `help_new_q`) VALUES
+(1, 'We know that Vol''jin is the new Warchief of the horde, but do we know who the new racial leader is going to be for the Orcs?'),
+(2, 'Wouldn''t it just be simpler to close or destroy the Dark Portal? '),
+(3, 'Do you think we will ever see further exploration of the elementals and their lords? '),
+(4, 'Wouldn''t it just be simpler to close or destroy the Dark Portal? ');
+
+-- --------------------------------------------------------
+
+--
 -- Tabeli struktuur tabelile `log`
 --
 
