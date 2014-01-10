@@ -35,19 +35,22 @@ CREATE TABLE IF NOT EXISTS `ad` (
   `ad_location` varchar(255) NOT NULL,
   `ad_image` varchar(255) DEFAULT NULL,
   `ad_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ad_priority` int(1) unsigned NOT NULL COMMENT '0=none (tavaline kuulutus)',
   `deleted` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ad_id`),
   KEY `ad_category` (`ad_category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Andmete tõmmistamine tabelile `ad`
 --
 
-INSERT INTO `ad` (`ad_id`, `ad_title`, `ad_text`, `ad_mail`, `ad_phone`, `ad_category`, `ad_publisher_name`, `ad_price`, `ad_location`, `ad_image`, `ad_time`, `deleted`) VALUES
-(3, 'lololo', 'majake', 'mail@mail', 346, 1, 'nimi', 588, 'tartu', 'MAJA.blend', '2013-10-17 13:22:38', 0),
-(21, 'title', 'gjhfjftfy', '', 4444, 5, 'Kia', 444, 'koht', NULL, '2013-10-29 09:11:15', 0),
-(22, 'asdfasdf', 'asdff', 'asdf', 0, 3, 'asdf', 0, 'asdfa', NULL, '2013-10-31 09:59:55', 0);
+INSERT INTO `ad` (`ad_id`, `ad_title`, `ad_text`, `ad_mail`, `ad_phone`, `ad_category`, `ad_publisher_name`, `ad_price`, `ad_location`, `ad_image`, `ad_time`, `ad_priority`, `deleted`) VALUES
+(3, 'lololo', 'majake', 'mail@mail', 346, 1, 'nimi', 588, 'tartu', 'MAJA.blend', '2013-10-17 13:22:38', 0, 0),
+(21, 'gookie', 'gjhfjftfy', '', 4444, 5, 'Kia', 444, 'koht', NULL, '2013-10-29 09:11:15', 1, 0),
+(22, 'tere', 'tere', '', 0, 6, 'tere', 0, 'tere', NULL, '2014-01-07 23:10:09', 0, 0),
+(23, 'ahat', 'tere', '', 0, 6, 'tere', 22, 'tere', NULL, '2014-01-08 00:46:21', 0, 0),
+(26, 'Prioriteediga ad', '...', 'a', 0, 5, 'a', 7, 'e', NULL, '2014-01-10 18:52:13', 2, 0);
 
 -- --------------------------------------------------------
 

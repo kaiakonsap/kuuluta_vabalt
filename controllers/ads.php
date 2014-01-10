@@ -28,6 +28,42 @@ class ads extends Controller {
 		}
 		$this->categories = $cat;
 
+        // FILTER ADS
+        //Aktiivsed kuulutused vaikimisi eesõiguse (kes rohkem maksnud või pildiga; kat. "Kuulutused")või kuupäeva järgi ("viimati üles pandud")?
+        $this->sort_cat_names = array("ad_price" => "Hind","ad_time" => "Kuupäev","ad_priority" => "Kuulutus");
+
+        if(isset($_COOKIE['ad_listing'])) {
+            $cookie_sort = explode(",", $_COOKIE['ad_listing']);
+            $_SESSION['list_sort_cat'] = $cookie_sort[0];
+            $_SESSION['list_sort_order'] = $cookie_sort[1]+0; //+0 to convert str into int
+        }
+        if(!isset($_SESSION['list_sort_cat'])) {
+            $_SESSION['list_sort_cat'] = "ad_priority"; // Default category; To have the default category <button> on the rightmost side, shift the corresponding element to be the last in $sort_cat_names.
+            $_SESSION['list_sort_order'] = SORT_DESC;
+        }
+        if(!isset($this->sort_cat)) { $this->sort_cat = $_SESSION['list_sort_cat']; }
+
+        // Save category preference and sorting order
+        foreach ($this->sort_cat_names as $cat_name => $title) {
+            if (isset($_POST[$cat_name])) {
+                if ($this->sort_cat === $cat_name) {
+                    if ($_SESSION['list_sort_order'] === SORT_ASC) {$_SESSION['list_sort_order'] = SORT_DESC;}
+                    else {$_SESSION['list_sort_order'] = SORT_ASC;}
+                }
+                else { $_SESSION['list_sort_order'] = SORT_ASC; }
+
+                $_SESSION['list_sort_cat'] = $cat_name;
+                $this->sort_cat = $_SESSION['list_sort_cat'];
+                setcookie('ad_listing', $this->sort_cat.",".$_SESSION['list_sort_order'], time() + (86400 * 0.004)); // 86400 = 1 day; current ~5 min
+                break;
+            }
+        }
+        // Sort outer array after inner array values
+        foreach($this->ads as $res) {
+            $sortAds[] = $res[$this->sort_cat];
+        }
+        array_multisort($sortAds, $_SESSION['list_sort_order'], $this->ads);
+        // END OF- FILTER ADS
 	}
 	function preview() {
 		/**
