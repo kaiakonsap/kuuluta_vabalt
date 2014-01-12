@@ -34,14 +34,15 @@
 </div>
 
 <?foreach($ads as $ad):
-    if ($ad['ad_image'] == NULL) { $ad['ad_image'] =  ASSETS_URL."images/no-image.jpg"; }
+    $images = explode(",", $ad['ad_image']);
+    if ($images[0] == NULL) { $images[0] =  ASSETS_URL."images/no-image.jpg"; }
 ?>
 
 <div class="container">
 	<ul class="thumbnails">
 		<li class="col-md-12 clearfix" >
 			<div class="thumbnail clearfix">
-				<img src="<?=$ad['ad_image']?>" alt="KUULUTUSE PILT" class="pull-left col-md-2 clearfix" style='margin-right:10px'>
+				<img src="<?=$images[0]?>" alt="KUULUTUSE PILT" class="pull-left col-md-2 clearfix" style='margin-right:10px'>
 				<div class="caption" class="pull-left">
 					<span class="btn btn-primary icon  pull-right"><?=$ad['ad_price']?>€</span>
 					<h4>
