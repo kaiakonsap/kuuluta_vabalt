@@ -17,7 +17,7 @@ class ads extends Controller {
 			$cat[$ct["category_id"]]=$ct["category_name"];
 		}
 		$this->categories = $cat;
-
+        $this->images = explode(",", $this->ads['ad_image']);
 	}
 	function lists(){
 		$this->ads = get_all("SELECT * FROM ad" );

@@ -1,23 +1,7 @@
+<link rel="stylesheet" href="<?=ASSETS_URL?>css/lightbox.css" type="text/css" />
 <div class="container">
 	<div class="row">
-		<div class="col-md-4">
-			<img width="320px" alt="140x140" src="http://lorempixel.com/140/140/" />
-		</div>
 		<div class="col-md-8">
-			<div class="row-fluid">
-				<div class="col-md-3">
-					<img alt="140x140" src="http://lorempixel.com/140/140/" />
-				</div>
-				<div class="col-md-3">
-					<img alt="140x140" src="http://lorempixel.com/140/140/" />
-				</div>
-				<div class="col-md-3">
-					<img alt="140x140" src="http://lorempixel.com/140/140/" />
-				</div>
-				<div class="col-md-3">
-					<img alt="140x140" src="http://lorempixel.com/140/140/" />
-				</div>
-			</div>
 			<div class="row">
 				<div class="col-md-6">
 					<h1><?=$ads['ad_title']?></h1>
@@ -41,4 +25,14 @@
 			<p><?=$ads['ad_time']?></p>
 		</div>
 	</div>
+    <div id="imageSet" class="row">
+    <?foreach($images as $index=>$img):
+        if ($images[$index] == NULL) { $images[$index] =  ASSETS_URL."images/no-image.jpg"; }
+        echo '<a href="'.$images[$index].'" class="lightboxTrigger">
+            <img class="thumb" src="'.$images[$index].'" alt=""/></a>';
+    endforeach?>
+    </div>
 </div>
+
+<script src="<?=ASSETS_URL?>js/jquery-1.10.2.min.js"></script>
+<script src="<?=ASSETS_URL?>js/lightbox.js"></script>
