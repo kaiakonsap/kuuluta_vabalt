@@ -46,11 +46,12 @@ CREATE TABLE IF NOT EXISTS `ad` (
 --
 
 INSERT INTO `ad` (`ad_id`, `ad_title`, `ad_text`, `ad_mail`, `ad_phone`, `ad_category`, `ad_publisher_name`, `ad_price`, `ad_location`, `ad_image`, `ad_time`, `ad_priority`, `deleted`) VALUES
-(3, 'lololo', 'majake', 'mail@mail', 346, 1, 'nimi', 588, 'tartu', 'MAJA.blend', '2013-10-17 13:22:38', 0, 0),
-(21, 'gookie', 'gjhfjftfy', '', 4444, 5, 'Kia', 444, 'koht', NULL, '2013-10-29 09:11:15', 1, 0),
-(22, 'tere', 'tere', '', 0, 6, 'tere', 0, 'tere', NULL, '2014-01-07 23:10:09', 0, 0),
-(23, 'ahat', 'tere', '', 0, 6, 'tere', 22, 'tere', NULL, '2014-01-08 00:46:21', 0, 0),
-(26, 'Prioriteediga ad', '...', 'a', 0, 5, 'a', 7, 'e', NULL, '2014-01-10 18:52:13', 2, 0);
+(3, 'lololo', 'majake', 'mail@mail', 346, 1, 'nimi', 588, 'tartu', '/kuuluta/assets/images/ads/ad-id3_0.jpg', '2013-10-17 13:22:38', 0, 0),
+(21, 'gookie', 'gjhfjftfy', '', 4444, 5, 'Kia', 444, 'koht', '/kuuluta/assets/images/ads/ad-id21_0.jpg,/kuuluta/assets/images/ads/ad-id21_1.jpg', '2013-10-29 09:11:15', 1, 0),
+(22, 'tere', 'tere', '', 0, 6, 'tere', 0, 'tere', '/kuuluta/assets/images/ads/ad-id22_0.jpg', '2014-01-07 23:10:09', 0, 0),
+(23, 'ahat', 'tere', '', 0, 6, 'tere', 22, 'tere', '/kuuluta/assets/images/ads/ad-id23_0.jpg,/kuuluta/assets/images/ads/ad-id23_1.jpg,/kuuluta/assets/images/ads/ad-id23_2.jpg,/kuuluta/assets/images/ads/ad-id23_3.jpg,/kuuluta/assets/images/ads/ad-id23_4.jpg', '2014-01-08 00:46:21', 0, 0),
+(26, 'Prioriteediga ad', '...', 'a', 0, 5, 'a', 7, 'e', '/kuuluta/assets/images/ads/ad-id26_0.jpg,/kuuluta/assets/images/ads/ad-id26_1.jpg', '2014-01-10 18:52:13', 2, 0),
+(37, 'pildita', 'fef', 'tere', 0, 1, 'tere', 0, 'tere', '', '2014-01-12 00:36:52', 0, 0);
 
 -- --------------------------------------------------------
 
