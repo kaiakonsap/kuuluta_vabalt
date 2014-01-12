@@ -1,3 +1,5 @@
+<? $_SESSION['captcha'] = simple_php_captcha(); ?>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -47,6 +49,14 @@
 				<button type="button" class="btn btn-primary btn-lg"><a href="javascript:history.go(-1)">Tagasi kuulutust muutma</a></button>
 			<form method="POST">
 				<input type="submit" name="submit" value="Lisa kuulutus" class="btn btn-primary btn-lg">
+                <div class="row">
+                    <div class="col-lg-1" style="width:170px">
+                        <div class="form-group">
+                            <input name="captcha" type="text" class="span3 form-control" placeholder="Kontrollkood" required="required" >
+                        </div>
+                        <img  src="<?=$_SESSION['captcha']['image_src']?>" style="height:50px;" alt="CAPTCHA Image" />
+                    </div>
+                </div>
 			</form>
 		</div>
 	</div>

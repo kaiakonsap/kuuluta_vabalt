@@ -66,6 +66,7 @@ class ads extends Controller {
         // END OF- FILTER ADS
 	}
 	function preview() {
+        include("assets/captcha/simple_php_captcha.php");
 		/**
 		Vaja ifid üksteise sisse ja ja previews näitab ka pilti
 		 */
@@ -118,7 +119,7 @@ class ads extends Controller {
 			}
 		}
 
-		if(isset($_POST["submit"])){
+		if(isset($_POST["submit"]) && $_POST['captcha'] == $_SESSION['captcha']['code']){
 			insert("ad", $_SESSION["preview_data"]);
 			$_SESSION['adInsertSuccess'] = "<p><strong>Kuulutuse sisestamine õnnestus!</strong> Täname Teid koostöö eest!</p>";
 			header('Location: '.BASE_URL.'/ads/lists/');
@@ -127,7 +128,7 @@ class ads extends Controller {
 	function help() {
         $this->help = get_all("SELECT * FROM help");
 
-        //TODO: Empty $_POST["new_question"] upon page refresh
+        //TODO: Empty $_POST["new_question"] upon page refresh (don't resend the question)
         //TODO?: Give info on question limit
         if(!empty($_POST["new_question"]) && preg_match("/[a-zA-Z0-9]/",$_POST["new_question"])){
             $q = $_POST['new_question'];
