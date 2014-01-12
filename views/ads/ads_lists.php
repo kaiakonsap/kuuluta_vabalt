@@ -33,12 +33,15 @@
 	<?php endif; ?>
 </div>
 
-<?foreach($ads as $ad):?>
+<?foreach($ads as $ad):
+    if ($ad['ad_image'] == NULL) { $ad['ad_image'] =  ASSETS_URL."images/no-image.jpg"; }
+?>
+
 <div class="container">
 	<ul class="thumbnails">
 		<li class="col-md-12 clearfix" >
 			<div class="thumbnail clearfix">
-				<img src="http://www.vendelin.ee/photoblog/images/20100713233330_karu3.jpg" alt="ALT NAME" class="pull-left col-md-2 clearfix" style='margin-right:10px'>
+				<img src="<?=$ad['ad_image']?>" alt="KUULUTUSE PILT" class="pull-left col-md-2 clearfix" style='margin-right:10px'>
 				<div class="caption" class="pull-left">
 					<span class="btn btn-primary icon  pull-right"><?=$ad['ad_price']?>€</span>
 					<h4>

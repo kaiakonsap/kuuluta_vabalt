@@ -81,6 +81,10 @@ class ads extends Controller {
 				$allowedExts = array("gif", "jpeg", "jpg", "png");
 				$temp = explode(".", $_FILES["ad_image"]["name"]);
 				$extension = end($temp);
+                /* Security issue with 'type' in $_FILES["ad_image"]["type"] ?
+                 * From http://www.php.net/manual/en/features.file-upload.post-method.php
+                 * "This mime type is however not checked on the PHP side and therefore don't take its value for granted."
+                 */
 				if ((($_FILES["ad_image"]["type"] == "image/gif")
 						|| ($_FILES["ad_image"]["type"] == "image/jpeg")
 						|| ($_FILES["ad_image"]["type"] == "image/jpg")
@@ -96,15 +100,15 @@ class ads extends Controller {
 					}
 					else
 					{
-						if (file_exists(ASSETS_URL . "images/" . $_FILES["ad_image"]["name"]))
+						if (file_exists(ASSETS_URL . "images/ads/" . $_FILES["ad_image"]["name"]))
 						{
 							echo $_FILES["ad_image"]["name"] . " already exists. ";
 						}
 						else
 						{
 							move_uploaded_file($_FILES["ad_image"]["tmp_name"],
-								getcwd(). "/assets/images/" . $_FILES["ad_image"]["name"]);
-							$_SESSION["preview_data"]["ad_image"]=ASSETS_URL . "images/" . $_FILES["ad_image"]["name"];
+								getcwd(). "/assets/images/ads/" . $_FILES["ad_image"]["name"]);
+							$_SESSION["preview_data"]["ad_image"]=ASSETS_URL . "images/ads/" . $_FILES["ad_image"]["name"];
 						}
 					}
 				}
